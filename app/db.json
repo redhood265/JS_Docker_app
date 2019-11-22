@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "TEST"
+    },
+    {
+      "id": 2,
+      "title": "aikatsu",
+      "author": "Johnny"
+    },
+    {
+      "title": "星宮いち",
+      "author": "星宮らいち",
+      "id": 3
+    }
+  ]
+}

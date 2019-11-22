@@ -24,3 +24,10 @@ docker container ls
 docker container exec -it JS_Develop /bin/sh
 docker container exec -it JS_Develop /bin/bash
 ```
+
+#### CURL(JSON)
+
+```cmd
+curl -X GET http://localhost:3001/articles
+curl -X POST http://localhost:3001/articles --data 'title=星宮いちご&author=星宮らいち'
+```
