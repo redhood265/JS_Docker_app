@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   console.log("App init")
   const [movie_name, set_MovieName] = useState("");
+  const [hidden, setHidden] = useState(false);
 
   const handleChange = e => {
     set_MovieName(e.target.value )
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h6>検索フォームの値「{movie_name}」</h6>
+      {hidden ? <h6>検索フォームの値「{movie_name}」</h6> : ""}
       <h1 className="hooked_title">HOOKED</h1>
       <form onSubmit={printValues} >
         <label>
@@ -25,6 +26,8 @@ function App() {
         </label>
         <input className="search_btn" type="submit" value="SEARCH" />
       </form>
+      <button onClick={() => setHidden(true)}>表示</button>
+      <button onClick={() => setHidden(false)}>非表示</button>
     </div>
   );
 }
