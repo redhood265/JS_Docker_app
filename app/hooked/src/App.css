@@ -20,3 +20,25 @@
 .App-link {
   color: #09d3ac;
 }
+
+.hooked_title {
+  /* 背景色 */
+  background-color: #000;
+  /* 文字の色 */
+  color: #FFF;
+}
+
+.search_field{
+  font-size:1.3em;
+}
+
+.search_btn {
+  /* 文字サイズを1.4emに指定 */
+  font-size: 1.2em;
+  /* 文字の太さをboldに指定 */
+  font-weight: bold;
+  /* 余白を指定 */
+  padding: 0.4em;
+  /* 要素との間隔 */
+  margin: 1em;
+}
