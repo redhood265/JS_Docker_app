@@ -20,7 +20,7 @@ docker-compose create
 docker-compose start
 ```
 
-### コンテナを作成して開始(Create and Start)
+### コンテナたちを作成して開始(Create and Start)
 
 ```cmd
 docker-compose up -d
