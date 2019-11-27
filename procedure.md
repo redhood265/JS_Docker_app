@@ -1,31 +1,44 @@
 # Dockerのコマンド
 
-#### ビルド
+## 初回
+
+### ビルド
 
 ```cmd
 docker-compose build
 ```
 
-#### コンテナを作成して開始
+### 作成
+
+```cmd
+docker-compose create
+```
+
+### コンテナ開始
+
+```cmd
+docker-compose start
+```
+
+### コンテナを作成して開始(Create and Start)
 
 ```cmd
 docker-compose up -d
 ```
 
-#### コンテナが開始されたか確認
+### コンテナが開始されたか確認
 
 ```cmd
 docker container ls
 ```
 
-#### コンテナ内にログイン(以下からのコマンドは、コンテナで実行)
+### コンテナ内にログイン(以下からのコマンドは、コンテナで実行)
 
 ```cmd
-docker container exec -it JS_Develop /bin/sh
-docker container exec -it JS_Develop /bin/bash
+docker container exec -it JS_Develop_container_name /bin/bash
 ```
 
-#### CURL(JSON)
+#### CURL(JSON-Server)
 
 ```cmd
 JSON-serberを利用すり際にはpackage.json(app配下)に以下を記載

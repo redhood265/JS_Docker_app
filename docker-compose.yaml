@@ -1,7 +1,7 @@
 version: "3"
 services:
   node:
-    container_name: JS_Develop
+    container_name: JS_Develop_container_name
     build: .
     volumes:
       - ./app:/app
