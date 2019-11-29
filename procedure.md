@@ -1,35 +1,39 @@
 # Dockerのコマンド
 
-## 初回
-
-### ビルド
+## ビルド
 
 ```cmd
 docker-compose build
 ```
 
-### 作成
+## 作成
 
 ```cmd
 docker-compose create
 ```
 
-### コンテナ開始
+## コンテナ開始
 
 ```cmd
 docker-compose start
 ```
 
-### コンテナたちを作成して開始(Create and Start)
+## コンテナたちを作成して開始(Create and Start)
 
 ```cmd
 docker-compose up -d
 ```
 
-### コンテナが開始されたか確認
+### イメージ一覧
 
 ```cmd
-docker container ls
+docker-compose images
+```
+
+### コンテナ一覧
+
+```cmd
+docker-compose ps
 ```
 
 ### コンテナ内にログイン(以下からのコマンドは、コンテナで実行)
