@@ -9,12 +9,14 @@ const MOVIE_API_URL = ""
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState(["a","b"]);
+  const [movies, setMovies] = useState([
+    { Title: "Title-a", Year: "20XX" }
+  ]);
   const [erMsg, setErrorMessage] = useState(null);
 
   useEffect(() => {
     fetch(MOVIE_API_URL).then(response => response.json).then(jsonResponse => {
-      setMovies(jsonResponse.Search);
+      // setMovies(jsonResponse.Search);
       setLoading(false)
     });
   }, []);
@@ -27,7 +29,7 @@ function App() {
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
-          setMovies(jsonResponse.Search)
+          // setMovies(jsonResponse.Search)
           setLoading(false)
         } else {
           setErrorMessage(jsonResponse.Error)
@@ -42,11 +44,10 @@ function App() {
       <Search search={search} />
       <p className="App-intro">Sharing a few of our favourite movies</p>
 
-      <div classNmae="movies_a">
+      <div classNmae="movies">
         {
           loading && !erMsg ? (<span>loading...</span>) :
-            erMsg ? (<div className="errorMessage">{erMsg}</div>) : ""
-              // (movies.map((movie, index) => (<Movie key={`${index}-${movie.Title}`} movie={movie} />)))
+            erMsg ? (<div className="errorMessage">{erMsg}</div>) : (movies.map((movie, index) => (<Movie key={`${index}-${movie.Title}`} movie={movie} />)))
         }
       </div>
 
