@@ -9,7 +9,7 @@ const MOVIE_API_URL = ""
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(["a","b"]);
   const [erMsg, setErrorMessage] = useState(null);
 
   useEffect(() => {
@@ -42,16 +42,11 @@ function App() {
       <Search search={search} />
       <p className="App-intro">Sharing a few of our favourite movies</p>
 
-      <div classNmae="movies">
-        {loading && !erMsg ? (
-          <span>loading...</span>
-        ) : erMsg ? (
-            <div className="errorMessage">{erMsg}</div>
-          ) : (
-              movies.map((movie, index) => (
-                <Movie key={`${index}-${movie.Title}`} movie={movie} />
-              )
-            ))
+      <div classNmae="movies_a">
+        {
+          loading && !erMsg ? (<span>loading...</span>) :
+            erMsg ? (<div className="errorMessage">{erMsg}</div>) : ""
+              // (movies.map((movie, index) => (<Movie key={`${index}-${movie.Title}`} movie={movie} />)))
         }
       </div>
 
