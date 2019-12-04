@@ -52,3 +52,7 @@ JSON-serberを利用すり際にはpackage.json(app配下)に以下を記載
 curl -X GET http://localhost:3001/articles
 curl -X POST http://localhost:3001/articles --data 'title=星宮いちご&author=星宮らいち'
 ```
+
+#### コンテナログイン後のReactプロジェクトの作り方
+
+create-react-app PJ名

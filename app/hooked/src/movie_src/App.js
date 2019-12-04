@@ -9,9 +9,9 @@ const MOVIE_API_URL = ""
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([
-    { Title: "Title-a", Year: "20XX" }
-  ]);
+  const [movies, setMovies] = useState([{}]);
+  //   { Title: "Title-a", Year: "20XX" }
+  // ]);
   const [erMsg, setErrorMessage] = useState(null);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
   const search = searchValue => {
     setLoading(true);
     setErrorMessage(null);
+    setMovies({ Title: "Title-a", Year: "20XX" });
 
     fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=`)
       .then(response => response.json())

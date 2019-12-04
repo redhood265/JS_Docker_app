@@ -8,7 +8,7 @@ RUN export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PA
 # yarnをアップデート
 RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 # create-react-appをインストール
-RUN yarn global add create-react-app json-server
+RUN yarn global add create-react-app json-server redux react-redux
 # yarnでインストールしたパッケージ一覧
 RUN yarn global list
 WORKDIR /app
