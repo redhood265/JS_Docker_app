@@ -55,7 +55,11 @@ curl -X POST http://localhost:3001/articles --data 'title=星宮いちご&author
 
 #### コンテナログイン後のReactプロジェクトの作り方
 
-create-react-app PJ名
+yarn create react-app PJ名
+
+```txt
+コンテナにログインしてから実行すること！！！！
+```
 
 #### JS_Docker_appのタスク
 
@@ -77,3 +81,8 @@ create-react-app PJ名
     - [ ]   データベースの使用方法
     - [ ]   データベースへのデータの保存方法
     - [ ]   データベースからのデータ
+
+#### Redux Todoサンプル用コマンド
+
+mkdir actions components containers reducers
+touch actions/Todo.js components/Todo.js containers/Todo.js reducers/Todo.js ./createStore.js
