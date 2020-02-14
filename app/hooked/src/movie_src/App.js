@@ -4,8 +4,8 @@ import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
 
-// OMDBにAPI許可を貰う？
-const MOVIE_API_URL = ""
+// OMDBにAPI許可を貰う
+const MOVIE_API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=48c54847"
 
 function App() {
   const [loading, setLoading] = useState(true);
