@@ -42,6 +42,10 @@ docker-compose ps
 docker container exec -it JS_Develop_container_name /bin/bash
 ```
 
+#### reactサーバの起動
+cd hooked
+yarn start
+
 #### CURL(JSON-Server)
 
 ```cmd
